@@ -5,10 +5,13 @@ Register
 {% endblock %}
 
 {% block content %}
-<body >
-    <div class="container">
+<body>
+    <div class="container" style="width: 50%;">
         <form method="POST" class="form-register" style="color:white">
-            <img class="mb-4" src="https://res.cloudinary.com/jimshapedcoding/image/upload/v1597332609/android-icon-192x192_ove2a7.png" alt="">
+            {{ form.hidden_tag() }}
+            <center>
+                <img class="mb-4" src="https://res.cloudinary.com/jimshapedcoding/image/upload/v1597332609/android-icon-192x192_ove2a7.png" alt="" >
+            </center>
             <h1 class="h3 mb-3 font-weight-normal">
                 Please Create your Account
             </h1>
@@ -24,9 +27,10 @@ Register
     
             {{ form.password2.label() }}
             {{ form.password2(class="form-control", placeholder="Confirm Password") }}
-
             <br> 
-            {{ form.submit(class="btn btn-lg btn-block btn-primary")}}
+            <div class="submit" style="width: 40%;">
+                {{ form.submit(class="btn btn-lg btn-block btn-primary")}}
+            </div>
         </form>
     </div>
 </body>
