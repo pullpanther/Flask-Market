@@ -5,20 +5,14 @@
   </style>
   
   <!-- Selling Confirm -->
-  <div class="modal fade" id="Modal-SellingConfirm-{{ owned_item.id }}"
-       tabindex="-1"
-       aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
+  <div class="modal fade bd-example-modal-lg" id="Modal-SellingConfirm-{{ owned_item.id }}" tabindex="-1" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg ">
       <div class="modal-content">
         <div class="modal-header">
           <h5 class="modal-title" id="ModalLabel">
             <!-- -->
             {{ owned_item.name }}
           </h5>
-          <button type="button" class="close"
-                  data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
         </div>
         <div class="modal-body">
           <form method="POST">
@@ -28,7 +22,7 @@
             </h4>
             <br>
             <h6 class="text-center">
-              By clicking Sell, you will put this item back on market
+              Click sell if you want to put this item back on market.
             </h6>
             <br>
             <input id="sold_item" name="sold_item" type="hidden" value="{{owned_item.name}}">
